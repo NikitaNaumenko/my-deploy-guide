@@ -28,8 +28,7 @@ Install the gems via bundler:
     
 It’s time to configure Capistrano:
 
-
-       cap install STAGES=production
+    cap install STAGES=production
     
 This comand will create configuration files for Capistrano at config/deploy.rb 
 and config/deploy/production.rb. deploy.rb is the main configuration file
@@ -47,10 +46,10 @@ and Puma integration tasks when finished:
     
 Edit deploy.rb:
      
-    set :application, 'contactbook'
+    set :application, 'your app name'
     set :repo_url, 'git@github.com:NikitaNaumenko/example.git' # Edit this to match your repository
     set :branch, :master
-    set :deploy_to, '/home/deploy/contactbook'
+    set :deploy_to, '/home/deploy/your-project-name'
     set :pty, true
     set :linked_files, %w{config/database.yml config/application.yml}
     set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
